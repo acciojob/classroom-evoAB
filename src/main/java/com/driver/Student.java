@@ -1,5 +1,9 @@
 package com.driver;
 
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.HashMap;
+
 public class Student {
 
     private String name;
@@ -8,5 +12,35 @@ public class Student {
 
     public Student(){
 
+    }
+
+    public Student(String name, int age, double averageScore){
+        this.name=name;
+        this.age=age;
+        this.averageScore=averageScore;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getAverageScore() {
+        return averageScore;
+    }
+
+    public void setAverageScore(double averageScore) {
+        this.averageScore = averageScore;
     }
 }

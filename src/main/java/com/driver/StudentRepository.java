@@ -35,17 +35,17 @@ public class StudentRepository {
     public List<String> getStudentsByTeacherName(String teacher){
         return studentteacherDB.get(teacher);
     }
-    List<String> getAllStudents(){
+    public List<String> getAllStudents(){
         List <String> students= new ArrayList<>();
         for(String s : studentDB.keySet())
             students.add(s);
         return students;
     }
-    void deleteTeacherByName(String teacher){
+    public void deleteTeacherByName(String teacher){
         teacherDB.remove(teacher);
         studentteacherDB.remove(teacher);
     }
-    void deleteAllTeachers(){
+    public void deleteAllTeachers(){
         teacherDB.clear();
         studentteacherDB.clear();
     }

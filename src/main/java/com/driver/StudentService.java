@@ -34,13 +34,13 @@ public class StudentService {
     public List<String> getStudentsByTeacherName(String teacher){
         return studentRepository.getStudentsByTeacherName(teacher);
     }
-    List<String> getAllStudents(){
+    public List<String> getAllStudents(){
         return studentRepository.getAllStudents();
     }
-    void deleteTeacherByName(String teacher){
+    public void deleteTeacherByName(String teacher){
         studentRepository.deleteTeacherByName(teacher);
     }
-    void deleteAllTeachers(){
+    public void deleteAllTeachers(){
         studentRepository.deleteAllTeachers();
     }
 }

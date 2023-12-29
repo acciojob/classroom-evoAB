@@ -44,14 +44,14 @@ public class StudentController {
     public ResponseEntity<Student> getStudentByName(@PathVariable String name){
         Student student = null; // Assign student by calling service layer method
         student=studentService.getStudentByName(name);
-        return new ResponseEntity<>(student, HttpStatus.CREATED);
+        return new ResponseEntity<>(student, HttpStatus.ACCEPTED);
     }
 
     @GetMapping("/get-teacher-by-name/{name}")
     public ResponseEntity<Teacher> getTeacherByName(@PathVariable String name){
         Teacher teacher = null; // Assign student by calling service layer method
         teacher=studentService.getTeacherByName(name);
-        return new ResponseEntity<>(teacher, HttpStatus.CREATED);
+        return new ResponseEntity<>(teacher, HttpStatus.ACCEPTED);
     }
 
     @GetMapping("/get-students-by-teacher-name/{teacher}")
